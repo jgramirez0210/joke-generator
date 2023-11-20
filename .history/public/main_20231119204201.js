@@ -4,7 +4,7 @@ import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
 import homePage from '../components/homePage';
 import { currentJokeSetup, currentJokePunchline, jokeStage } from '../utils/sample_data/jokeData';
-import getRequest from '../utils/getJoke';
+import get
 // Function to initialize the application
 const init = () => {
   // Event listener for the joke button
