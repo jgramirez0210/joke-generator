@@ -13,7 +13,7 @@ const init = () => {
     const jokeDisplay = document.querySelector('#joke-display');
     let jokeStage = 'getJoke';
     let currentJokeSetup = '';
-    let currentJokePunchline = '';
+    const currentJokePunchline = '';
     if (jokeStage === 'getJoke') {
       getRequest()
         .then((data) => {

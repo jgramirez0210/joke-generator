@@ -12,8 +12,8 @@ const init = () => {
     const jokeButton = document.querySelector('#joke-button');
     const jokeDisplay = document.querySelector('#joke-display');
     let jokeStage = 'getJoke';
-    let currentJokeSetup = '';
-    let currentJokePunchline = '';
+    const currentJokeSetup = '';
+    const currentJokePunchline = '';
     if (jokeStage === 'getJoke') {
       getRequest()
         .then((data) => {

@@ -3,7 +3,7 @@
 import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
 import homePage from '../components/homePage';
-// import { currentJokeSetup, currentJokePunchline } from '../utils/sample_data/jokeData';
+import { currentJokeSetup, currentJokePunchline, jokeStage } from '../utils/sample_data/jokeData';
 import getRequest from '../utils/getJoke';
 // Function to initialize the application
 const init = () => {
@@ -11,9 +11,7 @@ const init = () => {
   document.querySelector('#joke-button').addEventListener('click', () => {
     const jokeButton = document.querySelector('#joke-button');
     const jokeDisplay = document.querySelector('#joke-display');
-    let jokeStage = 'getJoke';
-    let currentJokeSetup = '';
-    let currentJokePunchline = '';
+
     if (jokeStage === 'getJoke') {
       getRequest()
         .then((data) => {
