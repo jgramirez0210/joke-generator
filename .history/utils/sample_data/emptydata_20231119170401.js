@@ -1,0 +1,2 @@
+const currentJokeSetup = '';
+const currentJokePunchline =
