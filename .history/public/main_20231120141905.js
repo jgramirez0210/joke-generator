@@ -34,7 +34,7 @@ const init = () => {
       .catch(reject);
   });
 
-  // Event listener for the joke button
+  // Event listener for the joke button 
   document.querySelector('#joke-button').addEventListener('click', () => {
     const jokeButton = document.querySelector('#joke-button');
     const jokeDisplay = document.querySelector('#joke-display');
