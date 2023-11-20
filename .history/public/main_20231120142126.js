@@ -38,6 +38,7 @@ const init = () => {
   document.querySelector('#joke-button').addEventListener('click', () => {
     const jokeButton = document.querySelector('#joke-button');
     const jokeDisplay = document.querySelector('#joke-display');
+
     if (jokeStage === 'getJoke') {
       getRequest()
         .then((data) => {
