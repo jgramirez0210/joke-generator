@@ -2,11 +2,30 @@
 // import ViewDirectorBasedOnUserAuthStatus from '../utils/viewDirector';
 import 'bootstrap'; // import bootstrap elements and js
 import '../styles/main.scss';
-import homePage from '../components/homePage';
-import { currentJokeSetup, currentJokePunchline, jokeStage } from '../utils/sample_data/jokeData';
-import getRequest from '../utils/getJoke';
+import endpoint from '../api/jokeApi';
+
 // Function to initialize the application
 const init = () => {
+  // Set initial HTML structure
+
+  // Variables to store joke data
+  let currentJokeSetup = '';
+  let currentJokePunchline = '';
+  let jokeStage = 'getJoke';
+
+  // Function to fetch a joke from the API
+  const getRequest = () => new Promise((resolve, reject) => {
+    fetch(endpoint, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => resolve(data))
+      .catch(reject);
+  });
+
   // Event listener for the joke button
   document.querySelector('#joke-button').addEventListener('click', () => {
     const jokeButton = document.querySelector('#joke-button');
@@ -47,7 +66,6 @@ const init = () => {
 };
 
 const startApp = () => {
-  homePage();
   init();
 };
 startApp();
