@@ -10,6 +10,7 @@ const init = () => {
   document.querySelector('#app').innerHTML = `
     <button class="btn btn-danger" id="joke-button">Get a Joke!</button><br />
     <div id="joke-display"></div>
+    <hr />
   `;
 
   // Variables to store joke data
