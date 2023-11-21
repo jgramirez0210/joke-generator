@@ -9,7 +9,8 @@ const init = () => {
   // Set initial HTML structure
   document.querySelector('#app').innerHTML = `
     <button class="btn btn-danger" id="joke-button">Get a Joke!</button><br />
-    <div id="joke-display"></div>
+    <div id="joke-display"></div> <!-- Div for displaying the joke -->
+    <hr />
   `;
 
   // Variables to store joke data
